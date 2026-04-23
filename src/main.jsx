@@ -7,6 +7,7 @@ import RootLayout from './layouts/RootLayout';
 import Home from './components/Home/Home';
 import AllProducts from './components/AllProducts/AllProducts';
 import AuthProvider from './context/AuthProvider';
+import Register from './components/Register/Register';
 
 const router = createBrowserRouter([
   {
@@ -14,7 +15,8 @@ const router = createBrowserRouter([
     element: <RootLayout />,
     children: [
       { index: true, element: <Home /> },
-      {path : "allProducts", element: <AllProducts/>}
+      { path: "allProducts", element: <AllProducts /> },
+      {path: "register", element: <Register/>}
     ]
   },
 ]);
