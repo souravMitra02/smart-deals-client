@@ -8,6 +8,8 @@ import Home from './components/Home/Home';
 import AllProducts from './components/AllProducts/AllProducts';
 import AuthProvider from './context/AuthProvider';
 import Register from './components/Register/Register';
+import MyProducts from './components/MyProducts/MyProducts';
+import MyBids from './components/MyBids/MyBids';
 
 const router = createBrowserRouter([
   {
@@ -15,8 +17,10 @@ const router = createBrowserRouter([
     element: <RootLayout />,
     children: [
       { index: true, element: <Home /> },
-      { path: "allProducts", element: <AllProducts /> },
-      {path: "register", element: <Register/>}
+      { path: "all-products", element: <AllProducts /> },
+      { path: "register", element: <Register /> },
+      { path: "my-products", element: <MyProducts /> },
+      {path: "my-bids", element: <MyBids/>}
     ]
   },
 ]);

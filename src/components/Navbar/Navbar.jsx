@@ -24,12 +24,14 @@ console.log(user);
   };
 
   const navLinks = [
-    { name: "Home", icon: <Home size={18} />, href: "/" },
-    { name: "All Products", icon: <ShoppingBag size={18} />, href: "/allProducts" },
+  { name: "Home", icon: <Home size={18} />, href: "/" },
+  { name: "All Products", icon: <ShoppingBag size={18} />, href: "/all-products" },
+  ...(user ? [
     { name: "My Products", icon: <Package size={18} />, href: "/my-products" },
     { name: "My Bids", icon: <Gavel size={18} />, href: "/my-bids" },
     { name: "Create Product", icon: <PlusSquare size={18} />, href: "/create" },
-  ];
+  ] : [])
+];
 
   return (
     <>
